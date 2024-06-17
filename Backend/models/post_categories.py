@@ -17,7 +17,7 @@ class Category_posts:
         conn.commit()
         self.id = cursor.lastrowid
         print("{self.name} created")
-           
+        
         
     @classmethod
     def create_tables(cls):
