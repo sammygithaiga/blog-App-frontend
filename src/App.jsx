@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import BlogPost from './components/BlogPost';
-import AddBlogPost from './components/AddBlogPost'; // Import the new component
+import AddBlogPost from './components/AddBlogPost'; 
 import './index.css';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/post/:id" element={<BlogPost />} />
-          <Route path="/add" element={<AddBlogPost />} /> {/* Add new route */}
+          <Route path="/add" element={<AddBlogPost />} /> {}
         </Routes>
       </div>
     </Router>

@@ -1,7 +1,7 @@
 from db import cursor, conn
 
-class Categories:
-    TABLE_NAME = 'categories'
+class Tags:
+    TABLE_NAME = 'tags'
     
     def __init__(self, name):
         self.id = None
@@ -15,7 +15,7 @@ class Categories:
         cursor.execute(sql, (self.name,))
         conn.commit()
         self.id = cursor.lastrowid
-        print(f"Category created with ID: {self.id}")
+        print(f"Tag created with ID: {self.id}")
     
     @classmethod
     def create_table(cls):
@@ -32,7 +32,7 @@ class Categories:
     @classmethod
     def get_all(cls):
         cursor.execute(f"SELECT * FROM {cls.TABLE_NAME}")
-        categories = cursor.fetchall()
-        return [{"id": category["sports"], "name": category["edducation"]} for category in categories]
+        tags = cursor.fetchall()
+        return [{"id": tag[0], "name": tag[1]} for tag in tags]
 
-Categories.create_table()
+Tags.create_table()
