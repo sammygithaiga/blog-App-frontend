@@ -52,10 +52,6 @@ Node.js and npm
 SQLite
 
 # Backend Setup
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/yourusername/blog-app.git
 cd blog-app
 Set up a virtual environment and install dependencies:
 bash
